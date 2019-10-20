@@ -1,0 +1,13 @@
+version: '2.3'
+services:
+  classifying_names_with_rnn:
+    container_name: classifying_names_with_rnn
+    user: root
+    build: .
+    volumes:
+      - ./:/mnt
+    ports:
+      - "8989:8888"
+    tty: true
+    command: /bin/bash
+    runtime: nvidia
